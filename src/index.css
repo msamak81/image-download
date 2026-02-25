@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800;900&display=swap");
+
+:root {
+  --gradient-start: #430275;
+  --gradient-mid: #490281;
+  --gradient-end: #4f008c;
+  --glass-bg: #dfe0e6;
+  --glass-border: #dfe0e6;
+  --glass-shadow: rgba(0, 0, 0, 0.3);
+  --accent-purple: #4f008c;
+  --accent-pink: #ff375e;
+  --accent-blue: #a54ee1;
+  --accent-cyan: #1cced8;
+  --text-primary: #090d0f;
+  --text-secondary: #424b53;
+  --text-muted: #8f99a1;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "stc", sans-serif;
+  background: #f3f3f1;
+  min-height: 100vh;
+  color: var(--text-primary);
+  overflow-x: hidden;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
