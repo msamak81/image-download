@@ -414,7 +414,7 @@
 }
 
 .glass-accent-line {
-  width: 80px;
+  width: 120px;
   height: 4px;
   margin: 1rem auto 0;
   background: linear-gradient(90deg, #fff 85%, var(--accent-pink) 85%);
@@ -508,7 +508,6 @@
   padding: 2.5rem 2rem;
   z-index: 2;
   border-radius: 16px;
-  overflow: hidden;
 }
 
 .design-content {
@@ -665,17 +664,38 @@
 }
 
 /* 6. neumorphism */
+.preview-card:has(
+  .design-neumorphism,
+  .accent-gradient-dynamic,
+  .design-solid-brand,
+  .accent-minimal-light,
+  .accent-minimal-dark,
+  .accent-neon-glow
+) {
+  background: transparent;
+  overflow: visible;
+}
 .design-neumorphism {
-  background: #ffffff;
-  box-shadow: inset 0 0 30px rgba(163, 177, 198, 0.15);
+  background: linear-gradient(145deg, #e6e6e6, #ffffff);
+  box-shadow:
+    15px 15px 32px #e6e6e6,
+    -15px -15px 32px #ffffff;
+  margin: 40px;
+  width: calc(100% - 80px);
+  height: calc(100% - 80px);
 }
 .text-neumorphism {
-  color: #2d3748;
+  color: #1d252d;
   text-shadow: 4px 4px 10px rgba(163, 177, 198, 0.6);
 }
 .accent-neumorphism {
-  background: #ffffff;
-  border-radius: 4px;
+  background: linear-gradient(
+    90deg,
+    var(--accent-purple) 85%,
+    var(--accent-pink) 85%
+  );
+  border-radius: 2px;
+  height: 4px;
   box-shadow:
     10px 10px 20px rgba(163, 177, 198, 0.5),
     -10px -10px 20px rgba(255, 255, 255, 0.9),
