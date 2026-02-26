@@ -24,7 +24,7 @@
 /* ===== App Container ===== */
 .app-container {
   width: 100%;
-  max-width: 800px;
+  max-width: 95vw;
   padding: 2rem;
   display: flex;
   flex-direction: column;
@@ -90,7 +90,7 @@
   border: 1px solid var(--glass-border);
   border-radius: 16px;
   color: var(--text-primary);
-  font-family: "Outfit", sans-serif;
+  font-family: "stc", sans-serif;
   font-size: 1.1rem;
   font-weight: 400;
   outline: none;
@@ -126,7 +126,7 @@
   border: 1px solid var(--glass-border);
   border-radius: 16px;
   color: var(--text-primary);
-  font-family: "Outfit", sans-serif;
+  font-family: "stc", sans-serif;
   font-size: 0.95rem;
   font-weight: 500;
   outline: none;
@@ -172,13 +172,14 @@
   width: 100%;
   display: flex;
   justify-content: center;
+  container-type: inline-size;
 }
 
 .preview-card {
   position: relative;
   min-width: 500px;
   min-height: 300px;
-  padding: 2rem 3rem;
+  padding: 0px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -278,11 +279,11 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 150px;
-  height: 150px;
+  width: 250px;
+  height: 250px;
   background: radial-gradient(
     circle,
-    rgba(0, 210, 255, 0.25) 0%,
+    rgba(0255, 106, 57, 0.25) 0%,
     transparent 70%
   );
   animation: float3 12s ease-in-out infinite;
@@ -294,6 +295,7 @@
   position: relative;
   z-index: 2;
   width: 100%;
+  height: 100%;
   border-radius: 16px;
   overflow: hidden;
   border: 1px solid rgba(255, 255, 255, 0.2);
@@ -354,6 +356,11 @@
   z-index: 2;
   padding: 2.5rem 2rem;
   text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
 }
 
 /* ===== Glass Text Panel (inner frosted card — export-safe) ===== */
@@ -488,6 +495,175 @@
   height: 22px;
 }
 
+/* ===== Design Themes ===== */
+.design-layer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 2.5rem 2rem;
+  z-index: 2;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.design-content {
+  position: relative;
+  z-index: 3;
+  text-align: center;
+}
+
+.design-text {
+  font-family: "stc", sans-serif;
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 1.3;
+  min-height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.design-accent {
+  width: 80px;
+  height: 4px;
+  margin: 1rem auto 0;
+  border-radius: 0px;
+}
+
+/* 1. dynamic-gradient */
+.design-gradient-dynamic {
+  background: linear-gradient(
+    135deg,
+    var(--accent-purple) 20%,
+    var(--accent-pink) 100%
+  );
+}
+.text-gradient-dynamic {
+  color: #ffffff;
+  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+.accent-gradient-dynamic {
+  background: linear-gradient(90deg, #fff 85%, var(--accent-pink) 85%);
+}
+.placeholder-gradient-dynamic {
+  color: rgba(255, 255, 255, 0.6);
+  font-family: "stc", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 300;
+  font-style: italic;
+}
+
+/* 2. solid-brand */
+.design-solid-brand {
+  background: var(--accent-purple);
+}
+.text-solid-brand {
+  color: #ffffff;
+}
+.accent-solid-brand {
+  background: linear-gradient(90deg, #fff 85%, var(--accent-pink) 85%);
+}
+.placeholder-solid-brand {
+  color: rgba(255, 255, 255, 0.6);
+  font-family: "stc", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 300;
+  font-style: italic;
+}
+
+/* 3. minimal-light */
+.design-minimal-light {
+  background: var(--glass-bg);
+}
+.text-minimal-light {
+  color: var(--text-primary);
+}
+.accent-minimal-light {
+  background: linear-gradient(
+    90deg,
+    var(--accent-purple) 85%,
+    var(--accent-pink) 85%
+  );
+}
+.placeholder-minimal-light {
+  color: var(--text-muted);
+  font-family: "stc", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 300;
+  font-style: italic;
+}
+
+/* 4. minimal-dark */
+.design-minimal-dark {
+  background: var(--text-primary);
+}
+.text-minimal-dark {
+  color: var(--glass-bg);
+}
+.accent-minimal-dark {
+  background: linear-gradient(90deg, #fff 85%, var(--accent-pink) 85%);
+}
+.placeholder-minimal-dark {
+  color: rgba(255, 255, 255, 0.5);
+  font-family: "stc", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 300;
+  font-style: italic;
+}
+
+/* 5. neon-glow */
+.design-neon-glow {
+  background: var(--text-primary);
+}
+.text-neon-glow {
+  color: #ffffff;
+  text-shadow:
+    0 0 1px #fff,
+    0 0 2px #fff,
+    0 0 5px var(--accent-pink),
+    0 0 10px var(--accent-pink),
+    0 0 20px var(--accent-pink);
+}
+.accent-neon-glow {
+  background: linear-gradient(90deg, #fff 85%, var(--accent-pink) 85%);
+  box-shadow:
+    0 0 10px var(--accent-pink),
+    0 0 20px var(--accent-pink);
+}
+.placeholder-neon-glow {
+  color: rgba(255, 255, 255, 0.3);
+  font-family: "stc", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 300;
+  font-style: italic;
+}
+.neon-orb {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  filter: blur(50px);
+  opacity: 0.5;
+}
+.neon-cyan-orb {
+  top: -20px;
+  right: -20px;
+  width: 150px;
+  height: 150px;
+  background: var(--accent-cyan);
+}
+.neon-pink-orb {
+  bottom: -20px;
+  left: -20px;
+  width: 150px;
+  height: 150px;
+  background: var(--accent-pink);
+}
+
 /* ===== Animations ===== */
 @keyframes float1 {
   0%,
@@ -541,6 +717,18 @@
 }
 
 /* ===== Responsive ===== */
+@media (max-width: 1200px) {
+  .demo-grid {
+    grid-template-columns: repeat(4, 1fr) !important;
+  }
+}
+
+@media (max-width: 992px) {
+  .demo-grid {
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
+}
+
 @media (max-width: 640px) {
   .app-container {
     padding: 1.5rem;
@@ -556,6 +744,10 @@
 
   .select-wrapper {
     min-width: 100%;
+  }
+
+  .demo-grid {
+    grid-template-columns: repeat(1, 1fr) !important;
   }
 
   .preview-card {
@@ -576,4 +768,100 @@
     width: 100%;
     justify-content: center;
   }
+}
+
+/* ===== Demo Grid Styles ===== */
+.demo-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 2rem 1.5rem;
+  width: 100%;
+}
+
+.demo-item {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  width: 100%;
+}
+
+.demo-download-btn {
+  background: linear-gradient(135deg, var(--accent-purple), var(--accent-pink));
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(168, 85, 247, 0.4);
+  transition: all 0.3s ease;
+}
+
+.demo-download-btn:hover {
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 8px 25px rgba(168, 85, 247, 0.6);
+}
+
+.demo-download-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.demo-download-btn svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* Override preview card size strictly inside the demo grid */
+.demo-grid .preview-card {
+  width: 100% !important;
+  min-width: 0 !important;
+  min-height: 0 !important;
+  height: auto !important;
+}
+
+.demo-grid .glass-text,
+.demo-grid .design-text {
+  font-size: clamp(0.9rem, 8cqi, 2rem) !important;
+  text-align: center;
+  min-height: auto !important;
+}
+
+.demo-grid .glass-accent-line,
+.demo-grid .design-accent {
+  width: 30% !important;
+  max-width: 60px !important;
+  margin-top: 5cqi !important;
+}
+
+.demo-grid .glass-content,
+.demo-grid .design-content {
+  padding: 5cqi !important;
+  width: 100%;
+}
+
+.demo-grid .orb-purple {
+  top: -20%;
+  left: -20%;
+  width: 150px;
+  height: 150px;
+}
+.demo-grid .orb-pink {
+  bottom: -10%;
+  right: -20%;
+  width: 120px;
+  height: 120px;
+}
+.demo-grid .orb-cyan {
+  width: 100px;
+  height: 100px;
+}
+.demo-grid .neon-orb {
+  width: 80px;
+  height: 80px;
 }
