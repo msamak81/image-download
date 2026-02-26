@@ -664,6 +664,32 @@
   background: var(--accent-pink);
 }
 
+/* 6. neumorphism */
+.design-neumorphism {
+  background: #ffffff;
+  box-shadow: inset 0 0 30px rgba(163, 177, 198, 0.15);
+}
+.text-neumorphism {
+  color: #2d3748;
+  text-shadow: 4px 4px 10px rgba(163, 177, 198, 0.6);
+}
+.accent-neumorphism {
+  background: #ffffff;
+  border-radius: 4px;
+  box-shadow:
+    10px 10px 20px rgba(163, 177, 198, 0.5),
+    -10px -10px 20px rgba(255, 255, 255, 0.9),
+    inset 1px 1px 2px rgba(255, 255, 255, 0.5);
+}
+.placeholder-neumorphism {
+  color: #a0aec0;
+  font-family: "stc", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 300;
+  font-style: italic;
+  text-shadow: 2px 2px 5px rgba(163, 177, 198, 0.4);
+}
+
 /* ===== Animations ===== */
 @keyframes float1 {
   0%,

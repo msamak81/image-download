@@ -23,6 +23,7 @@ const DESIGNS = [
   { label: 'Minimal Light', value: 'minimal-light' },
   { label: 'Minimal Dark', value: 'minimal-dark' },
   { label: 'Neon Glow', value: 'neon-glow' },
+  { label: 'Neumorphism', value: 'neumorphism' },
 ]
 
 function App() {
