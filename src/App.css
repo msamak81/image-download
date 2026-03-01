@@ -676,13 +676,14 @@
   overflow: visible;
 }
 .design-neumorphism {
+  --margin-value: 20px;
   background: linear-gradient(145deg, #e6e6e6, #ffffff);
   box-shadow:
     15px 15px 32px #e6e6e6,
     -15px -15px 32px #ffffff;
-  margin: 40px;
-  width: calc(100% - 80px);
-  height: calc(100% - 80px);
+  margin: var(--margin-value);
+  width: calc(100% - var(--margin-value) * 2);
+  height: calc(100% - var(--margin-value) * 2);
 }
 .text-neumorphism {
   color: #1d252d;
