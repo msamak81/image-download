@@ -135,10 +135,11 @@ function App() {
             <div ref={cardRef} className={`preview-card${aspectRatio !== 'auto' ? ` aspect-${aspectRatio}` : ''}`} id="export-card">
               {design === 'glass' ? (
                 <>
-                  <div className="orb orb-purple"></div>
+                 
+                  <div className="glass-overlay">
+                     <div className="orb orb-purple"></div>
                   <div className="orb orb-pink"></div>
                   <div className="orb orb-cyan"></div>
-                  <div className="glass-overlay">
                     <div className="glass-frost"></div>
                     <div className="glass-content">
                       {text.trim() ? (
