@@ -29,7 +29,7 @@ const DESIGNS = [
 function App() {
   const [text, setText] = useState('')
   const [aspectRatio, setAspectRatio] = useState('4-3')
-  const [design, setDesign] = useState('glass')
+  const [design, setDesign] = useState('neumorphism')
   const [isExporting, setIsExporting] = useState(false)
   const [showDemo, setShowDemo] = useState(false)
   const cardRef = useRef(null)
